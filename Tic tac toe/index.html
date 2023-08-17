@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X & O</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="Game">
+        <div class="x-emote">
+            <img id="x-win" src="./Animations/raven-fortnite.gif" alt="" class="win-emote" width="200px">
+            <img id="x-tie" src="./Animations/XOsX.gif" alt="" class="lose-emote" width="200px">
+            <img id="x-loss" src="./Animations/output-onlinegiftools.gif" alt="" class="draw-emote">
+        </div>
+        <div class="maingame">
+            <div class="cell bl-0 bt-0"><span class="move"></span></div>
+            <div class="cell bt-0"><span class="move"></span></div>
+            <div class="cell br-0 bt-0"><span class="move"></span></div>
+            <div class="cell bl-0"><span class="move"></span></div>
+            <div class="cell"><span class="move"></span></div>
+            <div class="cell br-0"><span class="move"></span></div>
+            <div class="cell bb-0 bl-0"><span class="move"></span></div>
+            <div class="cell bb-0"><span class="move"></span></div>
+            <div class="cell bb-0 br-0"><span class="move"></span></div>
+        </div>
+        <div class="o-emote">
+            <img id="o-win" src="./Animations/bf6.gif" alt="" class="win-emote">
+            <img id="o-tie" src="./Animations/DEv.gif" alt="" class="lose-emote">
+            <img id="o-loss" src="./Animations/3iCR.gif" alt="" class="draw-emote">
+        </div>
+    </section>
+    <section class="features">
+        <div class="gameinfo">
+            <div class="gamescore">
+                <div class="playerx">
+                    <h6>Player (X)</h6>
+                    <span class="scorex">0</span>
+                </div>
+                <div class="draw">
+                    <h6>Draw</h6>
+                    <span class="scoredraw">0</span>
+                </div>
+                <div class="playero">
+                    <h6>Player (O)</h6>
+                    <span class="scoreo">0</span>
+                </div>
+            </div>
+            <div class="reset-btn"><button class="reset">Reset</button></div>
+            
+        </div>
+        
+    </section>
+    <img src="./Animations/angry-cry.gif" alt="">
+
+    <script src="script.js"></script>
+</body>
+</html>

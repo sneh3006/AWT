@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS - Classic Game</title>
+</head>
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <h2>Choose Your Move :</h2>
+    <button id="rock" class="move">✊</button>
+    <button id="paper" class="move">🤚</button>
+    <button id="scissor" class="move">✌️</button>
+
+</body>
+<script>
+    //computer chooses move
+    computermove=()=>{
+        let move=Math.random()*10;
+        if(move>0 && move<=3){
+            return '✊';
+        }
+        if(move>3 && move<=6){
+            return '🤚';
+        }
+        if(move>6 && move<=9){
+            return '✌️';
+        }
+    }
+
+    //user chooses moves
+    let usermove;
+    document.querySelector('#rock').addEventListener('click',()=>{
+        usermove= '✊';
+    })
+    document.querySelector('#paper').addEventListener('click',()=>{
+        usermove= '🤚';
+    })
+    document.querySelector('#scissor').addEventListener('click',()=>{
+        usermove= '🤚';
+    })
+
+    //Game Logic
+    let Score={
+        wins:0,
+        loss:0,
+        Tie:0
+    }
+    if(usermove===computermove){
+        Score.Tie++;
+        console.log(Score);
+    }
+    if(usermove==='✊' && computermove==='🤚'||usermove==='🤚' && computermove==='✌️'||usermove==='✌️' && computermove==='✊'){
+        Score.loss++;
+    }
+    if(usermove==='🤚' && computermove==='✊' ||usermove==='✌️' && computermove==='🤚'||usermove==='✊' && computermove==='✌️'){
+        Score.wins++;
+    }
+    
+</script>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+<body>
+    <h1 class="play-game">
+        Rock Paper Scissor
+    </h1>
+    <div class="score">
+        <h3 id="wins">Wins:</h3>
+        <h3 id="loss">Loss:</h3>
+        <h3 id="tie">Tie:</h3>
+    </div>
+    <div class="choices">
+        <h2>Choose :</h2>
+        <button id="rock" onclick="rock()">
+            Rock
+        </button>
+        <button id="papper" onclick="Paper()">
+            Paper
+        </button>
+        <button id="scissor" onclick="scissor()">
+            Scissor
+    </div>
+    <script>
+        let wins=0;
+        let loss=0;
+        let tie=0;
+        document.getElementById("wins").innerHTML="Wins :";
+        document.getElementById("loss").innerHTML="Loss :";
+        document.getElementById("Tie").innerHTML="Tie :"; 
+        function Computer_choice()
+        {
+            let computer =(Math.random()*10);
+            if(computer<=3)
+            {
+                computer='rock';
+            }
+            else if(computer<=6)
+            {
+                computer='paper';
+            }
+            else
+            {
+                computer='scissor';
+            }
+            return computer;
+        }
+        function rock()
+        {
+            let computer=Computer_choice();
+            if(computer=='rock')
+            {
+                alert(`computer Chose ${computer}. It is Tie`);
+                tie++;
+            }
+            else if(computer=='paper')
+            {
+                alert(`computer Chose ${computer}. you lose`);
+                loss++;
+            }
+            else
+            {
+                alert(`computer Chose ${computer}. You win`);
+                wins++;
+            }
+        }
+        function Paper()
+        {
+            let computer=Computer_choice();
+            if(computer=='rock')
+            {
+                alert(`computer Chose ${computer}. You win`);
+                wins++;
+            }
+            else if(computer=='paper')
+            {
+                alert(`computer Chose ${computer}. It is Tie`);
+                tie++;
+            }
+            else
+            {
+                alert(`computer Chose ${computer}. you lose`);
+                loss++;
+            }
+        }
+        function scissor()
+        {
+            let computer=Computer_choice();
+            if(computer=='rock')
+            {
+                alert(`computer Chose ${computer}. you lose`);
+                loss++;
+            }
+            else if(computer=='paper')
+            {
+                alert(`computer Chose ${computer}. You win`);
+                wins++;
+            }
+            else
+            {
+                alert(`computer Chose ${computer}. It is Tie`);
+                tie++;
+            }
+        }
+    </script>
+</body>
+</html>

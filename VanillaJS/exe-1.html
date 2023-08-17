@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            border: none;
+            background-color: red;
+            color:white;
+            text-shadow: 1px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 0px 0px black;
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .blue{
+            border: none;
+            background-color: blue;
+            color:white;
+            text-shadow: 1px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 0px 0px black;
+            padding: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="red">
+        hello
+    </button>
+    <button class="blue" onclick="saybye()">
+        Bye
+    </button>
+    <script>
+        document.getElementsByClassName("red")[0].addEventListener("click",function(){
+            alert("Hello");
+        })
+        function saybye(){
+            alert("Bye");
+        };
+    </script>
+</body>
+</html>
